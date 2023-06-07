@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="libs/moment.js"></script>
+  </head>
+  <body>
+    <h1>Task 6.</h1>
+    <p>
+      З клавіатури вводяться вартість товару та кількість одиниць 3 товарів.
+      Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек
+      (як у супермаркеті) використовуючи елементи розмітки.
+    </p>
+    <script>
+      const first_product = parseInt(
+        prompt("Введіть кількість першого товару")
+      );
+      const first_product_price = parseFloat(
+        prompt("Введіть ціну першого товару")
+      );
+      const second_product = parseInt(
+        prompt("Введіть кількість другого товару")
+      );
+      const second_product_price = parseFloat(
+        prompt("Введіть ціну другого товару")
+      );
+      const third_product = parseInt(
+        prompt("Введіть кількість третього товару")
+      );
+      const third_product_price = parseFloat(
+        prompt("Введіть ціну третього товару ")
+      );
+
+      const first_total = first_product * first_product_price;
+      const second_total = second_product * second_product_price;
+      const third_total = third_product * third_product_price;
+      const total = first_total + second_total + third_total;
+
+      document.write(`
+      <table border="2px">
+    <tr border="3px" solid>
+        <th>Вартість товару</th>
+        <th>Кількість (шт)</th>
+        <th>Вартість (грн)</th>
+    </tr>
+    <tr border="1px">
+        <th>${first_product}</th>
+        <th>${first_product_price}</th>
+        <th>${first_total}</th>
+    </tr>
+    <tr border="1px">
+        <th>${second_product}</th>
+        <th>${second_product_price}</th>
+        <th>${second_total}</th>
+    </tr>
+    <tr border="1px">
+        <th>${third_product}</th>
+        <th>${third_product_price}</th>
+        <th>${third_total}</th>
+    </tr>
+    <tr border="1px">
+        <th></th>
+        <th>Ціна всього</th>
+        <th>${total}</th>
+    </tr>
+</table>
+      `);
+    </script>
+  </body>
+</html>

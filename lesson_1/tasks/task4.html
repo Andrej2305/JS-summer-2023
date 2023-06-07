@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 4.</h1>
+    <p>Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.</p>
+    <script>
+      let centimeters = parseInt(prompt("Введіть довжину в сантиметрах", "0"));
+      let meters = centimeters / 100;
+      let kilometers = centimeters / 100000;
+
+      document.write(
+        `${centimeters} сантиметрів - це ${meters} м та ${kilometers} км`
+      );
+    </script>
+  </body>
+</html>

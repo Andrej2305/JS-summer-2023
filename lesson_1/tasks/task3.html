@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 3.</h1>
+    <p>
+      Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ
+      (5% від загальної вартості).
+    </p>
+    <script>
+      let number_of_product = parseInt(prompt("Введіть кількість товару", "0"));
+      let price_of_product = parseFloat(prompt("Введіть вартість товару", "0"));
+      let total_price = number_of_product * price_of_product;
+      let pdv = total_price * 0.05;
+
+      document.write(`Total price - ${total_price}$ <br> PDV - ${pdv}$`);
+    </script>
+  </body>
+</html>

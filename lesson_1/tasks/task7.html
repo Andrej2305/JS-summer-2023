@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 7</h1>
+    <p>
+      Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера
+      дня (від 0 до 6).
+    </p>
+    <script>
+      const min_month = 1;
+      const max_month = 12;
+      const min_day = 0;
+      const max_day = 6;
+
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+      const month = getRandomInt(min_month, max_month);
+      const day = getRandomInt(min_day, max_day);
+      const sum = month + day;
+
+      document.write(`
+        Random month is ${month} <br> Random day is ${day} <br> Sum these two numbers is ${sum}
+      `);
+    </script>
+  </body>
+</html>
