@@ -1,1 +1,41 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 2</h1>
+    <p>
+        З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.
+    </p>
+
+    <script>
+      let price = parseFloat(prompt("Введіть ціну товару"));
+      let amount_of_money = parseFloat(
+        prompt("Введіть кількість грошей яка у вас є при собі")
+      );
+
+      const price_lottery_ticket = 4;
+      let message = "";
+      if(price > amount_of_money){
+        message = "Благодійністю не займаємося"
+      }
+      else if (price < amount_of_money) {
+        if((amount_of_money - price) >= price_lottery_ticket){
+            message = "Я бачу в тебе багато грошей залишилося, купи у мене ще й лотерейний квиток"
+        }
+        else{
+            message = "Так, я бачу що в тебе залишилися гроші, але їх не вистачає на лотерейний квиток. Але згідно ТЗ замовника, я все одно повинен запропонувати тобі купити лотерейний квиток, то як, купуешь?"
+        }
+      }
+
+      document.write(
+        `${message}`
+      )
+    </script>
+  </body>
+</html>

@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 3</h1>
+    <p>
+      Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за
+      2 спроби.
+    </p>
 
+    <script>
+      const min = 1;
+      const max = 5;
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      let random_value = getRandomInt(min, max);
+
+      alert(
+        "Приготуйся, фокус! Я загадав випадкове число від 1 до 5. Спробуй відгадати за дві спроби"
+      );
+      let alert_for_try = function () {
+        return parseInt(prompt("Введіть значення від 1 до 5"));
+      };
+      let attempt = alert_for_try();
+      let message = "";
+
+      if (random_value === attempt) {
+        message = `Круто, вгадав з першої спроби <br> ${random_value} - це число що я загадав`;
+      } else {
+        alert("Не вгадав, спробуй ще раз");
+        let attempt = alert_for_try();
+        if(random_value === attempt){
+            message = `Круто, вгадав з другої спроби. <br> ${random_value} - це число що я загадав`;
+        }
+        else{
+            message = `Не вгадав. <br> ${random_value} - це число що я загадав`;
+        }
+      }
+
+      document.write(`${message}`);
+    </script>
+  </body>
+</html>

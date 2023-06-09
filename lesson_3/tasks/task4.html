@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 4</h1>
+    <p>
+      З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у
+      садочку, школярем, студентом, працівником, пенсіонером).
+    </p>
 
+    <script>
+      const age_child = 6;
+      const age_schoolchild = 17;
+      const age_student = 22;
+      const age_adult = 59;
+
+      let message = "";
+      let age = parseInt(prompt("Ведіть вік людини"));
+
+      switch (true) {
+        case (age <= age_child):
+          message = "Цей вік як у дитини у садочку.";
+          break;
+        case (age <= age_schoolchild):
+          message = "Цей вік як у школяра.";
+          break;
+        case (age <= age_student):
+          message = "Цей вік як у студента.";
+          break;
+        case (age <= age_adult):
+          message = "Цей вік як у дорослого.";
+          break;
+        default:
+          message = "Цей вік як у пенсіонера.";
+          break;
+      }
+
+      document.write(`Вік людини ${age}. ${message}`);
+    </script>
+  </body>
+</html>

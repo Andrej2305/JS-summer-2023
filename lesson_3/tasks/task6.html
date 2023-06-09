@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 6</h1>
+    <p>З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.</p>
 
+    <script>
+      let message = "";
+      let day_week = prompt("Ведіть номер дня тижня", "");
+
+      switch (day_week) {
+        case "1":
+          message = `${day_week} - відповідає понеділку`;
+          break;
+        case "2":
+          message = `${day_week} - відповідає вівторку`;
+          break;
+        case "3":
+          message = `${day_week} - відповідає середі`;
+          break;
+        case "4":
+          message = `${day_week} - відповідає четвергу`;
+          break;
+        case "5":
+          message = `${day_week} - відповідає п'ятниці`;
+          break;
+        case "6":
+          message = `${day_week} - відповідає суботі`;
+          break;
+        case "7":
+          message = `${day_week} - відповідає неділі`;
+          break;
+        default:
+          message = "Це шось не по нашому";
+          break;
+      }
+
+      document.write(`${message}`);
+    </script>
+  </body>
+</html>
