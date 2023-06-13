@@ -19,24 +19,24 @@
       const age_student = 22;
       const age_adult = 59;
 
-      let message = "";
-      let age = parseInt(prompt("Ведіть вік людини"));
+      let message = '';
+      let age = parseInt(prompt('Ведіть вік людини'));
 
       switch (true) {
-        case (age <= age_child):
-          message = "Цей вік як у дитини у садочку.";
+        case age <= age_child:
+          message = 'Цей вік як у дитини у садочку.';
           break;
-        case (age <= age_schoolchild):
-          message = "Цей вік як у школяра.";
+        case age <= age_schoolchild:
+          message = 'Цей вік як у школяра.';
           break;
-        case (age <= age_student):
-          message = "Цей вік як у студента.";
+        case age <= age_student:
+          message = 'Цей вік як у студента.';
           break;
-        case (age <= age_adult):
-          message = "Цей вік як у дорослого.";
+        case age <= age_adult:
+          message = 'Цей вік як у дорослого.';
           break;
         default:
-          message = "Цей вік як у пенсіонера.";
+          message = 'Цей вік як у пенсіонера.';
           break;
       }
 

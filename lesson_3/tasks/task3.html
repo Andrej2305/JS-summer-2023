@@ -22,24 +22,23 @@
       let random_value = getRandomInt(min, max);
 
       alert(
-        "Приготуйся, фокус! Я загадав випадкове число від 1 до 5. Спробуй відгадати за дві спроби"
+        'Приготуйся, фокус! Я загадав випадкове число від 1 до 5. Спробуй відгадати за дві спроби',
       );
       let alert_for_try = function () {
-        return parseInt(prompt("Введіть значення від 1 до 5"));
+        return parseInt(prompt('Введіть значення від 1 до 5'));
       };
       let attempt = alert_for_try();
-      let message = "";
+      let message = '';
 
       if (random_value === attempt) {
         message = `Круто, вгадав з першої спроби <br> ${random_value} - це число що я загадав`;
       } else {
-        alert("Не вгадав, спробуй ще раз");
+        alert('Не вгадав, спробуй ще раз');
         let attempt = alert_for_try();
-        if(random_value === attempt){
-            message = `Круто, вгадав з другої спроби. <br> ${random_value} - це число що я загадав`;
-        }
-        else{
-            message = `Не вгадав. <br> ${random_value} - це число що я загадав`;
+        if (random_value === attempt) {
+          message = `Круто, вгадав з другої спроби. <br> ${random_value} - це число що я загадав`;
+        } else {
+          message = `Не вгадав. <br> ${random_value} - це число що я загадав`;
         }
       }
 

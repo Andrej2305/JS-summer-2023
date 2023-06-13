@@ -15,31 +15,31 @@
     </p>
 
     <script>
-      const motorbike_ciillic = "А";
-      const motorbike_latin = "A";
-      const car_ciillic = "В";
-      const car_latin = "B";
-      const truck_ciillic = "С";
-      const truck_latin = "C";
+      const motorbike_ciillic = 'А';
+      const motorbike_latin = 'A';
+      const car_ciillic = 'В';
+      const car_latin = 'B';
+      const truck_ciillic = 'С';
+      const truck_latin = 'C';
 
-      let message = "";
-      let category = prompt("Ведіть назву категорії водія", "");
+      let message = '';
+      let category = prompt('Ведіть назву категорії водія', '');
 
       switch (category) {
-        case "A":
-        case "А":
-          message = "Ти можешь керувати мотоциклом";
+        case 'A':
+        case 'А':
+          message = 'Ти можешь керувати мотоциклом';
           break;
-        case "B":
-        case "В":
-          message = "Ти можешь керувати автомобілем";
+        case 'B':
+        case 'В':
+          message = 'Ти можешь керувати автомобілем';
           break;
-        case "C":
-        case "С":
-          message = "Ти можешь керувати вантажним автомобілем";
+        case 'C':
+        case 'С':
+          message = 'Ти можешь керувати вантажним автомобілем';
           break;
         default:
-          message = "Ти можешь керувати інопланетною штукою";
+          message = 'Ти можешь керувати інопланетною штукою';
           break;
       }
 

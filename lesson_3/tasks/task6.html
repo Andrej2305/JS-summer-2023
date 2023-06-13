@@ -11,33 +11,33 @@
     <p>З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.</p>
 
     <script>
-      let message = "";
-      let day_week = prompt("Ведіть номер дня тижня", "");
+      let message = '';
+      let day_week = prompt('Ведіть номер дня тижня', '');
 
       switch (day_week) {
-        case "1":
+        case '1':
           message = `${day_week} - відповідає понеділку`;
           break;
-        case "2":
+        case '2':
           message = `${day_week} - відповідає вівторку`;
           break;
-        case "3":
+        case '3':
           message = `${day_week} - відповідає середі`;
           break;
-        case "4":
+        case '4':
           message = `${day_week} - відповідає четвергу`;
           break;
-        case "5":
+        case '5':
           message = `${day_week} - відповідає п'ятниці`;
           break;
-        case "6":
+        case '6':
           message = `${day_week} - відповідає суботі`;
           break;
-        case "7":
+        case '7':
           message = `${day_week} - відповідає неділі`;
           break;
         default:
-          message = "Це шось не по нашому";
+          message = 'Це шось не по нашому';
           break;
       }
 

@@ -15,29 +15,25 @@
     </p>
 
     <script>
-      let first_kid = prompt("Введіть ім'я першої дитини", "");
+      let first_kid = prompt("Введіть ім'я першої дитини", '');
       let first_count_of_candy = parseInt(
-        prompt("Введіть кількість цукерок у першої дитини")
+        prompt('Введіть кількість цукерок у першої дитини'),
       );
-      let second_kid = prompt("Введіть ім'я другої дитини", "");
+      let second_kid = prompt("Введіть ім'я другої дитини", '');
       let second_count_of_candy = parseInt(
-        prompt("Введіть кількість цукерок у другої дитини")
+        prompt('Введіть кількість цукерок у другої дитини'),
       );
 
-      let message = "";
-      if(first_count_of_candy > second_count_of_candy){
-        message = `${first_kid} має більшу кількість цукерок`
-      }
-      else if (first_count_of_candy < second_count_of_candy) {
-        message = `${second_kid} має більшу кількість цукерок`
-      }
-      else {
-        message = `Кількість цукерок однакова`
+      let message = '';
+      if (first_count_of_candy > second_count_of_candy) {
+        message = `${first_kid} має більшу кількість цукерок`;
+      } else if (first_count_of_candy < second_count_of_candy) {
+        message = `${second_kid} має більшу кількість цукерок`;
+      } else {
+        message = `Кількість цукерок однакова`;
       }
 
-      document.write(
-        `${message}`
-      )
+      document.write(`${message}`);
     </script>
   </body>
 </html>
