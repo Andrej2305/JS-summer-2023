@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+      }
+
+      .container p,
+      .container input {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Task 2</h1>
+    <p>Створити 10 елементів для введення цін продуктів</p>
+
+    <script>
+      let result = '';
+      for (let i = 0; i < 10; i++) {
+        result += `<div class="container">
+            <p>Product # ${i + 1}</p>
+            <input type="text" id="myInput" name="myInput" />
+                    </div>`;
+      }
+      document.write(result);
+    </script>
+  </body>
+</html>

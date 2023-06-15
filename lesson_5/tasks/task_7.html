@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Task 4</h1>
+    <p>Вивести таблицю з 3 рядків і 7 стовпців</p>
+
+    <script>
+      let columns_count = 7;
+      let rows_count = 3;
+      let table = '';
+      let columns = '';
+      let rows = '';
+
+      for (let i = 0; i < rows_count; i++) {
+        for (let q = 0; q < columns_count; q++) {
+          columns += `<td>${i + 1}</td>`;
+        }
+        rows += `<tr>
+            ${columns}
+                </tr>`;
+        columns = '';
+      }
+
+      document.write(`<table>${rows}</table>`);
+    </script>
+  </body>
+</html>

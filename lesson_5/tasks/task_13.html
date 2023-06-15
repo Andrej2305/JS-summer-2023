@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 10</h1>
+    <p>
+      Знайти суму всіх непарних чисел, що знаходяться між заданими користувачем
+      числами.
+    </p>
+
+    <script>
+      let user_number = parseInt(prompt('Введіть цифру'));
+
+      let response = 0;
+
+      for (let i = 1; i <= user_number; i++) {
+        i % 2 !== 0 ? (response += i) : '';
+      }
+
+      document.write(
+        `Сумма всіх непарних чисел які знаходяться у проміжку від 0 до ${user_number} - становить ${response}`,
+      );
+    </script>
+  </body>
+</html>

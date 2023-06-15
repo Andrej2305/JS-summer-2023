@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task -2</h1>
+    <p>
+      Поступово генерувати 100 випадкових чисел від 1 до 1000. Підрахувати яких
+      чисел більше: парних чи непарних.
+    </p>
+
+    <script>
+      const min = 1;
+      const max = 1000;
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      let i = 0;
+      let random_value;
+      let unpaired = 0;
+      let paired = 0;
+      let response = '';
+
+      while (i < 100) {
+        i++;
+        random_value = getRandomInt(min, max);
+        random_value % 2 === 0 ? paired++ : unpaired++;
+        response += random_value + (i == 100 ? '.' : ', ');
+      }
+
+      document.write(
+        `${response} <br><br> Парних чисел - ${paired} <br><br> Непарних чисел - ${unpaired}`,
+      );
+    </script>
+  </body>
+</html>

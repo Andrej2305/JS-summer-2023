@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+      }
+
+      .container table {
+        margin-right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Task 6</h1>
+    <p>Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком</p>
+
+    <script>
+      let columns_count = 3;
+      let rows_count = 3;
+      let table_count = 3;
+      let table = '';
+      let columns = '';
+      let rows = '';
+      let count = 1;
+
+      for (var w = 0; w < table_count; w++) {
+        for (let i = 0; i < rows_count; i++) {
+          for (let q = 0; q < columns_count; q++) {
+            columns += `<td>${count}</td>`;
+            count++;
+          }
+          rows += `<tr>
+            ${columns}
+                </tr>`;
+          columns = '';
+        }
+
+        table += `<table>${rows}</table>`;
+        rows = '';
+      }
+
+      document.write(`<div class="container">${table}</div>`);
+    </script>
+  </body>
+</html>

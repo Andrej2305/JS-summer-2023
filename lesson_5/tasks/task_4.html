@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 1</h1>
+    <p>
+      Вивести з використанням циклів маркований список з випадковими числами
+      (1-100). Кількість випадкових чисел вводиться користувачем. Приклад:
+    </p>
+
+    <script>
+      let user_number = parseInt(
+        prompt('Введіть рандомне число не больше 100'),
+      );
+      let result = '';
+      let random_number = 0;
+
+      if (user_number <= 100 && user_number > 0) {
+        for (let i = 0; i < user_number; i++) {
+          random_number = Math.floor(Math.random() * 100) + 1;
+          result += `<li>${random_number}</li>`;
+        }
+
+        document.write(`<ol>
+        ${result}
+    </ol>`);
+      } else {
+        document.write('Перезавантаж сторінку та спробуй ще раз розбійник');
+      }
+    </script>
+  </body>
+</html>

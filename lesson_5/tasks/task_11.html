@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Task 8</h1>
+    <p>
+      Користувач загадує число. За 3 спроби комп’ютер намагається вгадати число
+      користувача (використати confirm).
+    </p>
+
+    <script>
+      confirm('Загадайте число від 0 до 100');
+      let attempt = 3;
+      let random_number;
+      const min = 0;
+      const max = 100;
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      for (let i = 0; i < attempt; i++) {
+        random_number = getRandomInt(min, max);
+        if (confirm(`Ви загадали ${random_number}?`)) {
+          confirm("Комп'ютер вгадав число");
+          break;
+        } else if (attempt - (i + 1) > 0) {
+          confirm(`У комп'ютера залишилося ${attempt - (i + 1)} спроб`);
+        } else {
+          confirm("Комп'ютер програв");
+        }
+      }
+    </script>
+  </body>
+</html>

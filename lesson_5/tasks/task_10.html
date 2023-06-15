@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>Task 7</h1>
+    <p>Вивести на екран N абзаців (N вводиться користувачем) за зразком</p>
+
+    <script>
+      let user_number = parseInt(
+        prompt('Введіть кількість параграфів. Число не може бути більше 10'),
+      );
+      let p_result = '';
+      let h1_result = '';
+      let result = '';
+
+      if (user_number > 0 && user_number <= 10) {
+        for (let i = 1; i <= user_number; i++) {
+          h1_result = `<h1>Заголовок ${i}</h1>`;
+          let q = 0;
+          while (q < i) {
+            q++;
+            p_result += `<p>Розділ ${i}, параграф ${q}</p>`;
+          }
+          result += h1_result + p_result + '<hr>';
+          p_result = '';
+        }
+
+        document.write(`${result}`);
+      } else {
+        document.write('Перезавантаж сторінку та спробуй ще раз розбійник');
+      }
+    </script>
+  </body>
+</html>
